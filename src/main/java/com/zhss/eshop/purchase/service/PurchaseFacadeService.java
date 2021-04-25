@@ -28,7 +28,7 @@ public interface PurchaseFacadeService {
      * @param purchaseOrderId 采购入库单
      * @return 处理结果
      */
-    Boolean informFinishedPurchaseInputOrderEvent(Long purchaseOrderId);
+    Boolean informFinishPurchaseInputOrderEvent(Long purchaseOrderId);
 
     /**
      * 通知采购中心创建采购结算单事件
@@ -44,5 +44,5 @@ public interface PurchaseFacadeService {
      * @param purchaseOrderId 采购单
      * @return 处理结果
      */
-    Boolean informFinishedPurchaseSettlementOrderEvent(Long purchaseOrderId);
+    Boolean informFinishPurchaseSettlementOrderEvent(Long purchaseOrderId);
 }
