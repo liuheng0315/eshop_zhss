@@ -1,8 +1,8 @@
 package com.zhss.eshop.inventory.service;
 
-import com.zhss.eshop.order.dto.OrderDTO;
-import com.zhss.eshop.wms.dto.PurchaseInputOrderDTO;
-import com.zhss.eshop.wms.dto.ReturnGoodsInputDTO;
+import com.zhss.eshop.order.domain.OrderDTO;
+import com.zhss.eshop.wms.domain.PurchaseInputOrderDTO;
+import com.zhss.eshop.wms.domain.ReturnGoodsInputDTO;
 
 /**
  * 库存中心对外提供的接口

@@ -1,6 +1,6 @@
-package com.zhss.eshop.goods.promotion.service;
+package com.zhss.eshop.commodity.promotion.service;
 
-import com.zhss.eshop.goods.promotion.service.dto.PromotionActivityDTO;
+import com.zhss.eshop.commodity.promotion.service.dto.PromotionActivityDTO;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package com.zhss.eshop.goods.promotion.service.dto;
+package com.zhss.eshop.commodity.promotion.service.dto;
 
 import lombok.Data;
 

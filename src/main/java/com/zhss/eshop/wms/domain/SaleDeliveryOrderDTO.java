@@ -1,27 +1,19 @@
-package com.zhss.eshop.order.dto;
+package com.zhss.eshop.wms.domain;
 
 import lombok.Data;
 
 import java.util.Date;
 
 /**
- * 订单dto
+ * 销售出库DTO
  * @author liuheng
  */
 @Data
-public class OrderDTO {
+public class SaleDeliveryOrderDTO {
     /**
-     * 主键id
+     * 自增id
      */
     private Long id;
-    /**
-     * 用户的账号id
-     */
-    private Long userAccountId;
-    /**
-     * 订单状态
-     */
-    private Integer orderStatus;
     /**
      * 订单id
      */
@@ -29,11 +21,11 @@ public class OrderDTO {
     /**
      * 订单编号
      */
-    private String orderNo;
+    private Long orderNo;
     /**
-     * 退货入库单的状态
+     * 用户账号id
      */
-    private Integer returnGoodsInputOrderStatus;
+    private Long userAccountId;
     /**
      * 收货人
      */
@@ -79,9 +71,13 @@ public class OrderDTO {
      */
     private String taxpayerId;
     /**
-     * 订单备注
+     * 销售出库单状态
      */
-    private String orderComment;
+    private Integer saleDeliverOrderStatus;
+    /**
+     * 实际发货时间
+     */
+    private Date deliveryTime;
     /**
      * 创建时间
      */
