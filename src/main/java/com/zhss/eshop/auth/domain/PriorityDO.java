@@ -1,6 +1,7 @@
 package com.zhss.eshop.auth.domain;
 
 import lombok.Data;
+import org.springframework.beans.BeanUtils;
 
 import java.util.Date;
 
@@ -42,4 +43,14 @@ public class PriorityDO {
      * 更新时间
      */
     private Date gmtModified;
+
+    /**
+     * 克隆方法
+     * @param clazz 目标class对象
+     * @param <T> clone后的对象
+     * @return
+     */
+    public <T> T clone(Class<T> clazz){
+        return null;
+    }
 }
