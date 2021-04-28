@@ -1,5 +1,6 @@
 package com.zhss.eshop.auth.dao.impl;
 
+import com.sun.org.apache.xpath.internal.operations.Bool;
 import com.zhss.eshop.auth.dao.PriorityDAO;
 import com.zhss.eshop.auth.domain.PriorityDO;
 import com.zhss.eshop.auth.mapper.PriorityMapper;
@@ -28,5 +29,49 @@ public class PriorityDAOImpl implements PriorityDAO {
     @Override
     public List<PriorityDO> listRootPriorities() {
         return priorityMapper.listRootPriorities();
+    }
+
+    /**
+     * 查询子权限的列表
+     *
+     * @param parentId
+     * @return 子权限集合
+     */
+    @Override
+    public List<PriorityDO> listChildPriorities(Long parentId) {
+        return priorityMapper.listChildPriorities(parentId);
+    }
+
+    /**
+     * 新增权限
+     *
+     * @param priorityDO 权限DO
+     */
+    @Override
+    public Boolean savePriority(PriorityDO priorityDO) {
+        priorityMapper.savePriority(priorityDO);
+        return true;
+    }
+
+    /**
+     * 通过id获取权限
+     *
+     * @param id ID
+     * @return 权限
+     */
+    @Override
+    public PriorityDO getPriorityById(Long id) {
+        return priorityMapper.getPriorityById(id);
+    }
+
+    /**
+     * 更新权限
+     *
+     * @param priorityDO 权限DO
+     */
+    @Override
+    public Boolean updatePriority(PriorityDO priorityDO) {
+        priorityMapper.updatePriority(priorityDO);
+        return true;
     }
 }

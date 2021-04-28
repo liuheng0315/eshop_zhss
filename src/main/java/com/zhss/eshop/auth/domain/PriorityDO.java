@@ -1,16 +1,21 @@
 package com.zhss.eshop.auth.domain;
 
+import com.zhss.eshop.common.util.BeanCopierUtils;
 import lombok.Data;
-import org.springframework.beans.BeanUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.Date;
 
 /**
  * 权限的DO类
+ *
  * @author liuheng
  */
 @Data
 public class PriorityDO {
+    private static final Logger logger = LoggerFactory.getLogger(PriorityDO.class);
+
     /**
      * id
      */
@@ -46,11 +51,19 @@ public class PriorityDO {
 
     /**
      * 克隆方法
+     *
      * @param clazz 目标class对象
-     * @param <T> clone后的对象
+     * @param <T>   clone后的对象
      * @return
      */
-    public <T> T clone(Class<T> clazz){
-        return null;
+    public <T> T clone(Class<T> clazz) {
+        T target = null;
+        try {
+            target = clazz.newInstance();
+        } catch (Exception e) {
+            logger.error("PriorityDO中克隆对象出错", e);
+        }
+        BeanCopierUtils.copyProperties(this, target);
+        return target;
     }
 }
