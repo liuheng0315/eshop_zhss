@@ -86,4 +86,11 @@ public interface PriorityMapper {
             "parent_id=#{p.parent_id},gmt_create=#{p.gmtCreate},gmt_modified=#{p.gmtModified} " +
             "where id = #{p.id}")
     void updatePriority(@Param("p") PriorityDO priorityDO);
+
+    /**
+     * 删除权限
+     * @param id 权限Id
+     */
+    @Delete("delete * from auth_priority where id = #{id}")
+    void removePriority(@Param("id") Long id);
 }

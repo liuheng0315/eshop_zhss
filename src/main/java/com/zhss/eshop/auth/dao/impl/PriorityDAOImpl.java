@@ -74,4 +74,21 @@ public class PriorityDAOImpl implements PriorityDAO {
         priorityMapper.updatePriority(priorityDO);
         return true;
     }
+
+    /**
+     * 删除权限
+     *
+     * @param id 权限Id
+     * @return 处理结果
+     */
+    @Override
+    public Boolean removePriority(Long id) {
+        try {
+            priorityMapper.removePriority(id);
+            return true;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
 }

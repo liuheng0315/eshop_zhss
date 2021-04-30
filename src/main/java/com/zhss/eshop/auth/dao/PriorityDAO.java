@@ -1,7 +1,6 @@
 package com.zhss.eshop.auth.dao;
 
 import com.zhss.eshop.auth.domain.PriorityDO;
-import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -28,6 +27,7 @@ public interface PriorityDAO {
     /**
      * 新增权限
      * @param priorityDO 权限DO
+     * @return 结果
      */
     Boolean savePriority(PriorityDO priorityDO);
 
@@ -41,6 +41,14 @@ public interface PriorityDAO {
     /**
      * 更新权限
      * @param priorityDO 权限DO
+     * @return 处理结果
      */
     Boolean updatePriority(PriorityDO priorityDO);
+
+    /**
+     * 删除权限
+     * @param id 权限Id
+     * @return 处理结果
+     */
+    Boolean removePriority(Long id);
 }

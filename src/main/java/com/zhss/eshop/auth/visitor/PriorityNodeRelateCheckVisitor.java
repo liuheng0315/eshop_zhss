@@ -56,6 +56,10 @@ public class PriorityNodeRelateCheckVisitor implements PriorityNodeVisitor{
                 priorityNode.accept(this);
             }
         }
+
+        if (relateCheck(node)) {
+            this.relateCheckResult = true;
+        }
     }
 
     /**
@@ -73,7 +77,6 @@ public class PriorityNodeRelateCheckVisitor implements PriorityNodeVisitor{
         Long accountRelatedCount = accountPriorityRelationshipDAO.getCountByPriorityId(priorityNode.getId());
         if (accountRelatedCount != null && accountRelatedCount > 0) {
             return true;
-
         }
         return false;
     }
