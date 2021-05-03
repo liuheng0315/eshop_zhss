@@ -80,4 +80,12 @@ public class PriorityNodeRelateCheckVisitor implements PriorityNodeVisitor{
         }
         return false;
     }
+
+    public Boolean getRelateCheckResult() {
+        return relateCheckResult;
+    }
+
+    public void setRelateCheckResult(Boolean relateCheckResult) {
+        this.relateCheckResult = relateCheckResult;
+    }
 }

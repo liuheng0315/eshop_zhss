@@ -1,5 +1,6 @@
 package com.zhss.eshop.auth.service;
 
+import com.zhss.eshop.auth.composite.PriorityNode;
 import com.zhss.eshop.auth.domain.PriorityDO;
 import com.zhss.eshop.auth.domain.PriorityDTO;
 import org.apache.ibatis.annotations.Param;
@@ -51,4 +52,11 @@ public interface PriorityService {
      * @return
      */
     Boolean updatePriority(PriorityDTO priorityDTO);
+
+    /**
+     * 删除全选
+     * @param id 权限id
+     * @return 处理结果
+     */
+    Boolean removePriority(Long id);
 }

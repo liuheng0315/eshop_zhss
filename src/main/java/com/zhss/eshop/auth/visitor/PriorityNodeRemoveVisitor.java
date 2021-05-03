@@ -19,6 +19,7 @@ public class PriorityNodeRemoveVisitor implements PriorityNodeVisitor {
 
     /**
      * 构造函数
+     *
      * @param priorityDAO 权限管理的DAO组件
      */
     public PriorityNodeRemoveVisitor(PriorityDAO priorityDAO) {
@@ -39,5 +40,14 @@ public class PriorityNodeRemoveVisitor implements PriorityNodeVisitor {
                 pNode.accept(this);
             }
         }
+        removePriority(priorityNode);
+    }
+
+    /**
+     * 删除权限
+     * @param priorityNode 权限节点
+     */
+    public Boolean removePriority(PriorityNode priorityNode) {
+        return priorityDAO.removePriority(priorityNode.getId());
     }
 }
