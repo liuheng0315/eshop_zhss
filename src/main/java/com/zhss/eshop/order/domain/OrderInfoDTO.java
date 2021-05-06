@@ -3,13 +3,14 @@ package com.zhss.eshop.order.domain;
 import lombok.Data;
 
 import java.util.Date;
+import java.util.List;
 
 /**
  * 订单dto
  * @author liuheng
  */
 @Data
-public class OrderDTO {
+public class OrderInfoDTO {
     /**
      * 主键id
      */
@@ -90,4 +91,9 @@ public class OrderDTO {
      * 修改时间
      */
     private Date gmtModify;
+
+    /**
+     * 订单包含着订单条目
+     */
+    private List<OrderItemDTO> orderItemDTOS;
 }

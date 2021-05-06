@@ -1,6 +1,6 @@
 package com.zhss.eshop.wms.service;
 
-import com.zhss.eshop.order.domain.OrderDTO;
+import com.zhss.eshop.order.domain.OrderInfoDTO;
 import com.zhss.eshop.wms.domain.PurchaseInputOrderDTO;
 import com.zhss.eshop.wms.domain.ReturnGoodsInputDTO;
 import com.zhss.eshop.wms.domain.SaleDeliveryOrderDTO;
@@ -33,22 +33,22 @@ public interface WmsFacadeService {
 
     /**
      * 通知wms提交订单事件发生了
-     * @param orderDTO
+     * @param orderInfoDTO
      * @return
      */
-    Boolean informSubmitOrderEvent(OrderDTO orderDTO);
+    Boolean informSubmitOrderEvent(OrderInfoDTO orderInfoDTO);
 
     /**
      * 通知wms支付订单事件
-     * @param orderDTO
+     * @param orderInfoDTO
      * @return
      */
-    Boolean informPayOrderEvent(OrderDTO orderDTO);
+    Boolean informPayOrderEvent(OrderInfoDTO orderInfoDTO);
 
     /**
      * 通知wms取消订单事件
-     * @param orderDTO
+     * @param orderInfoDTO
      * @return
      */
-    Boolean informCancelOrderEvent(OrderDTO orderDTO);
+    Boolean informCancelOrderEvent(OrderInfoDTO orderInfoDTO);
 }

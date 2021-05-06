@@ -1,6 +1,6 @@
 package com.zhss.eshop.inventory.service;
 
-import com.zhss.eshop.order.domain.OrderDTO;
+import com.zhss.eshop.order.domain.OrderInfoDTO;
 import com.zhss.eshop.wms.domain.PurchaseInputOrderDTO;
 import com.zhss.eshop.wms.domain.ReturnGoodsInputDTO;
 
@@ -18,24 +18,24 @@ public interface InventoryFacadeService {
 
     /**
      * 通知库存中心提交订单事件发生了
-     * @param orderDTO 订单dto
+     * @param orderInfoDTO 订单dto
      * @return 处理结果
      */
-    Boolean informSubmitOrderEvent(OrderDTO orderDTO);
+    Boolean informSubmitOrderEvent(OrderInfoDTO orderInfoDTO);
 
     /**
      * 通知库存中心-支付订单事件发生了
-     * @param orderDTO
+     * @param orderInfoDTO
      * @return
      */
-    Boolean informPayOrderEvent(OrderDTO orderDTO);
+    Boolean informPayOrderEvent(OrderInfoDTO orderInfoDTO);
 
     /**
      * 通知库存中心-取消订单事件发生了
-     * @param orderDTO
+     * @param orderInfoDTO
      * @return
      */
-    Boolean informCancelOrderEvent(OrderDTO orderDTO);
+    Boolean informCancelOrderEvent(OrderInfoDTO orderInfoDTO);
 
     /**
      * 通知库存中心-完成退货入库事件发生了
