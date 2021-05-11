@@ -49,19 +49,19 @@ public class CommentInfoDTO {
     /**
      * 总评分，1~5
      */
-    private Long totalScore;
+    private Integer totalScore;
     /**
      * 商品评分，1~5
      */
-    private Long goodsScore;
+    private Integer goodsScore;
     /**
      * 客服评分，1~5
      */
-    private Long customerServiceScore;
+    private Integer customerServiceScore;
     /**
      * 物流评分，1~5
      */
-    private Long logisticsScore;
+    private Integer logisticsScore;
     /**
      * 评论内容
      */
@@ -85,11 +85,11 @@ public class CommentInfoDTO {
     /**
      * 创建时间
      */
-    private Date gmtCreat;
+    private Date gmtCreate;
     /**
      * 修改时间
      */
-    private Date gmtModify;
+    private Date gmtModified;
 
     public <T> T clone(Class<T> clazz) {
         T target = null;

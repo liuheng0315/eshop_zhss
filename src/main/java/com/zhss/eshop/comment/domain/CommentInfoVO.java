@@ -1,6 +1,8 @@
 package com.zhss.eshop.comment.domain;
 
+import com.zhss.eshop.common.util.BeanCopierUtils;
 import lombok.Data;
+import lombok.extern.slf4j.Slf4j;
 
 import java.util.Date;
 
@@ -10,6 +12,7 @@ import java.util.Date;
  * @date : 2021-05-06 22:18
  **/
 @Data
+@Slf4j
 public class CommentInfoVO {
     /**
      * id
@@ -87,4 +90,16 @@ public class CommentInfoVO {
      * 修改时间
      */
     private Date gmtModify;
+
+    public <T> T clone(Class<T> clazz) {
+        T target = null;
+        try {
+            target = clazz.newInstance();
+            BeanCopierUtils.copyProperties(this, target);
+        } catch (Exception e) {
+            log.error("error", e);
+            return null;
+        }
+        return target;
+    }
 }
