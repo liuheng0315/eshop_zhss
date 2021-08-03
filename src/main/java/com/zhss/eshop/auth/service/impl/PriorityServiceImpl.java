@@ -11,6 +11,7 @@ import com.zhss.eshop.auth.visitor.PriorityNodeRelateCheckVisitor;
 import com.zhss.eshop.auth.visitor.PriorityNodeRemoveVisitor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,6 +22,7 @@ import java.util.List;
  * @author liuheng
  */
 @Slf4j
+@Service
 public class PriorityServiceImpl implements PriorityService {
     @Autowired
     private PriorityDAO priorityDAO;

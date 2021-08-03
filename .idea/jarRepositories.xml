@@ -2,6 +2,16 @@
 <project version="4">
   <component name="RemoteRepositoriesConfiguration">
     <remote-repository>
+      <option name="id" value="central" />
+      <option name="name" value="central" />
+      <option name="url" value="https://maven.aliyun.com/repository/central" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven-public" />
+      <option name="name" value="maven-public" />
+      <option name="url" value="https://x-repo.xiaojiaoyu100.com/repository/maven-public/" />
+    </remote-repository>
+    <remote-repository>
       <option name="id" value="snapshots" />
       <option name="name" value="snapshots" />
       <option name="url" value="http://maven.aliyun.com/nexus/content/groups/public" />
@@ -10,6 +20,16 @@
       <option name="id" value="rdc-snapshots" />
       <option name="name" value="rdc-snapshots" />
       <option name="url" value="https://repo.rdc.aliyun.com/repository/1339-snapshot-5fVKFO/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven-releases" />
+      <option name="name" value="maven-releases" />
+      <option name="url" value="https://x-repo.xiaojiaoyu100.com/repository/maven-releases/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven-snapshots" />
+      <option name="name" value="maven-snapshots" />
+      <option name="url" value="https://x-repo.xiaojiaoyu100.com/repository/maven-snapshots/" />
     </remote-repository>
     <remote-repository>
       <option name="id" value="central" />
@@ -30,6 +50,11 @@
       <option name="id" value="jboss.community" />
       <option name="name" value="JBoss Community repository" />
       <option name="url" value="https://repository.jboss.org/nexus/content/repositories/public/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="snapshots" />
+      <option name="name" value="snapshots" />
+      <option name="url" value="https://maven.aliyun.com/repository/central" />
     </remote-repository>
   </component>
 </project>
