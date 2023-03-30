@@ -5,39 +5,36 @@ import lombok.Data;
 import java.util.Date;
 
 /**
- * 采购入库单DTO
- * @author liuheng
- */
+ * @author : liu heng
+ * @description :采购单DTO
+ * @date : 2023-03-28 23:16
+ **/
 @Data
 public class PurchaseOrderDTO {
     /**
-     * 主键
+     * id
      */
     private Long id;
     /**
-     * 供应商ID
+     * 供应商id
      */
     private Long supplierId;
     /**
-     * 期望到达时间
+     * 预期到货时间
      */
     private Date expectArrivalTime;
-    /**
-     * 实际到达实际
-     */
-    private Date arrivalTime;
     /**
      * 采购联系人
      */
     private String purchaseContactor;
     /**
-     * 采购联系人电话
+     * 采购联系人电话号码
      */
-    private String purchaseContactorPhoneNumber;
+    private String purchaseContactPhoneNumber;
     /**
-     * 采购联系人邮箱
+     * 采购联系人邮箱地址
      */
-    private String purchaseContactorPhoneEmail;
+    private String purchaseContactEmail;
     /**
      * 采购单备注
      */
@@ -47,15 +44,15 @@ public class PurchaseOrderDTO {
      */
     private String purchase;
     /**
-     * 采购单的状态
+     * 采购单状态
      */
     private Integer purchaseOrderStatus;
     /**
-     * 创建时间
+     * 采购单创建时间
      */
-    private Date gmtCreat;
+    private Date gmtCreate;
     /**
-     * 修改时间
+     * 采购单更新时间
      */
-    private Date gmtModify;
+    private Date gmtModified;
 }

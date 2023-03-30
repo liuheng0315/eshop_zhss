@@ -5,9 +5,10 @@ import lombok.Data;
 import java.util.Date;
 
 /**
- * 退货工单
- * @author liuheng
- */
+ * @author : liu heng
+ * @description :退货工单DTO
+ * @date : 2023-03-16 23:26
+ **/
 @Data
 public class ReturnGoodsWorksheetDTO {
     /**
@@ -15,35 +16,31 @@ public class ReturnGoodsWorksheetDTO {
      */
     private Long id;
     /**
-     * 订单ID
+     * 订单id
      */
     private Long orderId;
     /**
      * 订单编号
      */
-    private Long orderNo;
+    private String orderNo;
     /**
      * 退货工单的状态
      */
     private Integer returnGoodsWorksheetStatus;
     /**
-     * 退货工单的原因
+     * 退货原因
      */
     private String returnGoodsReason;
     /**
-     * 退货的备注
+     * 退货备注
      */
     private String returnGoodsComment;
     /**
-     * 退货的物流单号
-     */
-    private Long returnGoodsCourierNumber;
-    /**
-     * 创建时间
+     * 退货工单的创建时间
      */
     private Date gmtCreat;
     /**
-     * 修改时间
+     * 退货工单的修改时间
      */
-    private Date gmtModify;
+    private Date gmtModified;
 }

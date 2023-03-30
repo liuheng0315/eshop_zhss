@@ -5,15 +5,20 @@ import lombok.Data;
 import java.util.Date;
 
 /**
- * 销售出库DTO
- * @author liuheng
- */
+ * @author : liu heng
+ * @description : 退货入库单
+ * @date : 2023-03-23 23:20
+ **/
 @Data
 public class SaleDeliveryOrderDTO {
     /**
-     * 自增id
+     * id
      */
     private Long id;
+    /**
+     * 用户账号id
+     */
+    private Long userAccountId;
     /**
      * 订单id
      */
@@ -21,11 +26,7 @@ public class SaleDeliveryOrderDTO {
     /**
      * 订单编号
      */
-    private Long orderNo;
-    /**
-     * 用户账号id
-     */
-    private Long userAccountId;
+    private String orderNo;
     /**
      * 收货人
      */
@@ -35,7 +36,7 @@ public class SaleDeliveryOrderDTO {
      */
     private String deliveryAddress;
     /**
-     * 收货人电话号码
+     * 收货人手机号码
      */
     private String consigneeCellPhoneNumber;
     /**
@@ -45,9 +46,9 @@ public class SaleDeliveryOrderDTO {
     /**
      * 支付方式
      */
-    private Integer parType;
+    private Integer payType;
     /**
-     * 总金额
+     * 订单总金额
      */
     private Double totalAmount;
     /**
@@ -71,19 +72,23 @@ public class SaleDeliveryOrderDTO {
      */
     private String taxpayerId;
     /**
+     * 订单备注
+     */
+    private String orderComment;
+    /**
      * 销售出库单状态
      */
-    private Integer saleDeliverOrderStatus;
+    private Integer saleDeliveryOrderStatus;
     /**
      * 实际发货时间
      */
     private Date deliveryTime;
     /**
-     * 创建时间
+     * 销售出库单的创建时间
      */
-    private Date gmtCreat;
+    private Date gmtCreate;
     /**
-     * 修改时间
+     * 销售出库单的修改时间
      */
-    private Date gmtModify;
+    private Date gmtModified;
 }

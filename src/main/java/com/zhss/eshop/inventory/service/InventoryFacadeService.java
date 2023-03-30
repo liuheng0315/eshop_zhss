@@ -2,52 +2,52 @@ package com.zhss.eshop.inventory.service;
 
 import com.zhss.eshop.order.dto.OrderDTO;
 import com.zhss.eshop.wms.dto.PurchaseInputOrderDTO;
-import com.zhss.eshop.wms.dto.ReturnGoodsInputDTO;
 
 /**
- * 库存中心对外提供的接口
- * @author liuheng
- */
+ * @author : liu heng
+ * @description :库存中心对外提供的接口
+ * @date : 2023-03-28 22:32
+ **/
 public interface InventoryFacadeService {
     /**
-     * 通过库存中心采购入库事件发生了
-     * @param purchaseInputOrderDTO 采购入库单
+     * 通知库存中心,"采购入库完成"的事件发生了
+     * @param purchaseInputOrderDTO 采购入库单DTO
      * @return 处理结果
      */
-    Boolean informPurchaseInputFinished(PurchaseInputOrderDTO purchaseInputOrderDTO);
+    Boolean informPurchaseInputOrderFinished(PurchaseInputOrderDTO purchaseInputOrderDTO);
 
     /**
-     * 通知库存中心提交订单事件发生了
-     * @param orderDTO 订单dto
+     * 通知库存中心,"提交订单"事件发生了
+     * @param orderDTO 订单DTO
      * @return 处理结果
      */
     Boolean informSubmitOrderEvent(OrderDTO orderDTO);
 
     /**
-     * 通知库存中心-支付订单事件发生了
-     * @param orderDTO
-     * @return
+     * 通知库存中心，"支付订单"的事件发生了
+     * @param orderDTO 订单DTO
+     * @return 处理结果
      */
     Boolean informPayOrderEvent(OrderDTO orderDTO);
 
     /**
-     * 通知库存中心-取消订单事件发生了
-     * @param orderDTO
-     * @return
+     * 通知库存中心，"取消订单"事件发生了
+     * @param orderDTO 订单DTO
+     * @return 处理结果
      */
     Boolean informCancelOrderEvent(OrderDTO orderDTO);
 
     /**
-     * 通知库存中心-完成退货入库事件发生了
-     * @param returnGoodsInputDTO 退货入库单DTO
+     * 通知库存中心，"完成退货入库"的事件发生了
+     * @param orderDTO 订单DTO
      * @return 处理结果
      */
-    Boolean finishReturnGoodsInputFinishedEvent(ReturnGoodsInputDTO returnGoodsInputDTO);
+    Boolean informReturnGoodsInputFinished(OrderDTO orderDTO);
 
     /**
-     * 查询商品sku库存
+     * 查询sku的库存
      * @param goodsSkuId 商品sku id
-     * @return 库存
+     * @return 商品sku id的库存
      */
     Long getSaleStockQuantity(Long goodsSkuId);
 }

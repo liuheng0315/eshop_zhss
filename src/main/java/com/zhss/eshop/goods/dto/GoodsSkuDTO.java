@@ -5,21 +5,22 @@ import lombok.Data;
 import java.util.Date;
 
 /**
- * 商品sku
- * @author liuheng
- */
+ * @author : liu heng
+ * @description :商品sku dto
+ * @date : 2023-03-19 23:58
+ **/
 @Data
 public class GoodsSkuDTO {
     /**
-     * 主键
+     * id
      */
     private Long id;
     /**
-     * 商品ID
+     * 商品id
      */
     private Long goodsId;
     /**
-     * 商品的sku编号
+     * 商品sku编号
      */
     private String goodsSkuCode;
     /**
@@ -37,9 +38,9 @@ public class GoodsSkuDTO {
     /**
      * 创建时间
      */
-    private Date gmtCreat;
+    private Date gmtCreate;
     /**
      * 修改时间
      */
-    private Date gmtModify;
+    private Date gmtModified;
 }

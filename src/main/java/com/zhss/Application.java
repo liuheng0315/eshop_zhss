@@ -7,12 +7,13 @@ import org.springframework.context.annotation.Import;
 
 /**
  * Hello world!
+ *
  * @author liuheng
  */
 @SpringBootApplication
 @Import(DruidDbConfig.class)
 public class Application {
-    public static void main(String[] args) {
+    public static void main( String[] args ) {
         SpringApplication.run(Application.class);
     }
 }

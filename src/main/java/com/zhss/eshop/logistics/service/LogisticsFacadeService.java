@@ -3,13 +3,14 @@ package com.zhss.eshop.logistics.service;
 import com.zhss.eshop.goods.dto.GoodsSkuDTO;
 
 /**
- * 物流中心对外提供接口
- * @author liuheng
- */
+ * @author : liu heng
+ * @description : 物流中心对外提供的接口
+ * @date : 2023-03-28 22:49
+ **/
 public interface LogisticsFacadeService {
     /**
-     * 计算运费
-     * @param goodsSkuDTO 商品SKU dto
+     * 计算商品sku的运费
+     * @param goodsSkuDTO 商品sku DTO
      * @return 商品sku的运费
      */
     Double calculateFreight(GoodsSkuDTO goodsSkuDTO);

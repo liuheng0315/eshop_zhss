@@ -8,9 +8,12 @@ import org.springframework.context.annotation.Primary;
 
 import javax.sql.DataSource;
 import java.sql.SQLException;
+
 /**
- * @author liuheng
- */
+ * @author : liu heng
+ * @description :
+ * @date : 2023-03-13 23:43
+ **/
 @Configuration
 public class DruidDbConfig {
     @Value("${spring.datasource.url}")
