@@ -1,6 +1,6 @@
-package com.zhss.eshop.goods.service;
+package com.zhss.eshop.commodity.service;
 
-import com.zhss.eshop.goods.dto.GoodsSkuDTO;
+import com.zhss.eshop.commodity.dto.GoodsSkuDTO;
 
 /**
  * @author : liu heng
