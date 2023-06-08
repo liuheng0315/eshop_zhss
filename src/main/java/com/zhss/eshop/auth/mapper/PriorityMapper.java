@@ -31,6 +31,34 @@ public interface PriorityMapper {
     List<PriorityDO> listChildPriorities(@Param("parentId") Long parentId);
 
     /**
+     * 根据id查询权限
+     * @param id 权限id
+     * @return 权限
+     */
+    @Select("SELECT "
+            + "id,"
+            + "code,"
+            + "url,"
+            + "priority_comment,"
+            + "priority_type,"
+            + "parent_id,"
+            + "gmt_create,"
+            + "gmt_modified "
+            + "FROM auth_priority "
+            + "WHERE id = #{id}")
+    @Results({
+            @Result(column = "id", property = "id", id = true),
+            @Result(column = "code", property = "code"),
+            @Result(column = "url", property = "url"),
+            @Result(column = "priority_comment", property = "priorityComment"),
+            @Result(column = "priority_type", property = "priorityType"),
+            @Result(column = "parent_id", property = "parentId"),
+            @Result(column = "gmt_create", property = "gmtCreate"),
+            @Result(column = "gmt_modified", property = "gmtModified")
+    })
+    PriorityDO getPriorityById(@Param("id") Long id);
+
+    /**
      * 查询账号被授权的根菜单
      * @param map 查询参数
      * @return 菜单

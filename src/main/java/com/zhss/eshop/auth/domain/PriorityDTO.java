@@ -1,9 +1,12 @@
 package com.zhss.eshop.auth.domain;
 
+import com.zhss.eshop.auth.service.impl.PriorityOperation;
 import com.zhss.eshop.common.util.AbstractObject;
 import lombok.Data;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 /**
  * @author : liu heng
@@ -44,4 +47,16 @@ public class PriorityDTO extends AbstractObject {
      * 权限的更新时间
      */
     private Date gmtModified;
+    /**
+     * 子权限节点
+     */
+    private List<PriorityDTO> children = new ArrayList<PriorityDTO>();
+
+    /**
+     * 接收一个权限树访问者
+     * @param operation 权限树访问者
+     */
+    public <T> T execute(PriorityOperation<T> operation) throws Exception {
+        return operation.doExecute(this);
+    }
 }

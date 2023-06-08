@@ -39,9 +39,9 @@ public class PriorityVO extends AbstractObject {
     /**
      * 权限的创建时间
      */
-    private Date gmtCreate;
+    private String gmtCreate;
     /**
      * 权限的更新时间
      */
-    private Date gmtModified;
+    private String gmtModified;
 }
